@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% block content %}
+   <form class="row g-3"  action="/vacantes_fedita2/{{vac.0}}" method="post">
+      <h3>
+         <b class="mintit">Editar Vacante </b>
+     </h3>
+     <div class="col-md-6">
+      <label for="fuenteCandidato" class="minap">Fuente de Candidato</label>
+      <input type="text" class="form-control" name="fuenteCandidato" id="fuenteCandidato" value="{{FuenteC.0}}"></input>
+   </div>
+   <div class="col-md-6">
+      <label for="inicioFechaPublic" class="minap">Fecha de Publicación</label>
+      <input type="text" class="form-control" name="inicioFechaPublic" id="inicioFechaPublic" value="{{FechaP.0}}"></input>
+
+   </div>
+   <div class="col-md-12">
+      <label for="finFechaPublic" class="minap">Fecha de Expiración</label>
+      <input type="text" class="form-control" name="finFechaPublic" id="finFechaPublic" value="{{FechaE.0}}"></input>
+   </div>
+   <div class="col-md-8">
+      <label for="Publicada" class="minap">Publicada</label>
+      <input type="text" class="form-control" name="publicada" id="publicada" value="{{Pub.0}}"></input>
+   </div>
+   <div class="col-md-4">
+      <label for="observaciones"class="minap">Observaciónes</label>
+      <input type="text" class="form-control" name="observaciones" id="observaciones" value="{{Obs.0}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label  class="minap">Seleccion de Candidacto</label>
+      <input type="text" class="form-control" name="candidatoSelecc" id="candidatoSelecc" value="{{SeleC.0}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label for="fechaContratacion" class="minap">Fecha de Contratación</label>
+      <input type="text" class="form-control" name="fechaContratacion" id="fechaContratacion" value="{{FechaC.0}}"></input>
+   </div>
+   <div class="col-md-12">
+       <label for="idr4v  " class="minap">Id Requisición</label>
+       <input type="text" class="form-control" name="idRequisicion" id="idRequisicion" value="{{idRe.0}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label  class="minap">Id Puesto</label>
+      <input type="text" class="form-control" name="idPuesto" id="idPuesto" value="{{idRe.0}}"></input>
+  </div>
+
+   <div class="col-12">
+          <button type="submit" class="btn btn-outline-light">Actualizar</button>
+    </div>
+</form>
+{% endblock %}

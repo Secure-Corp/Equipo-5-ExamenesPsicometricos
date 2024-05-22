@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="row g-3"  action="/requisicion_fedita2/{{req.0}}" method="post">
+   <h3>
+      <b class="mintit">Editar Requisición</b>
+   </h3>
+   <div class="col-md-12">
+      <label class="minap">Folio</label>
+      <input type="text" class="form-control" name="folio" id="folio" value="{{folio.0}}"></input>
+   </div>
+   <br>
+   <div class="col-md-6">
+      <label class="minap">Fecha de Elaboracion</label>
+      <input type="text" class="form-control" name="fechaElab" id="fechaElab" value="{{elab.0}}"></input>
+   </div>
+   <div class="col-md-6">
+      <label class="minap">Fecha Reclutamiento</label>
+      <input type="text" class="form-control" name="fechaRecluta" id="fechaRecluta" value="{{recluta.0}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Inicio Vacante</label>
+      <input type="text" class="form-control" name="fechaInicVac" id="fechaInicVac" value="{{inicvac.0}}"></input>
+   </div>
+   <div class="col-md-8">
+      <label class="minap">Motivo</label>
+      <input type="text" class="form-control" name="motivoRequisicion" id="motivoRequisicion" value="{{motivo.0}}"></input>
+   </div>
+   <div class="col-md-4">
+      <label class="minap">Motivo Especifique</label>
+      <input type="text" class="form-control" name="motivoEspesifique" id="motivoEspesifique" value="{{motes.0}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Tipo</label>
+      <input type="text" class="form-control" name="tipoVacante" id="tipoVacante" value="{{tipo.0}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Nombre Solicita</label>
+      <input type="text" class="form-control" name="nomSolicita" id="nomSolicita" value="{{nomsoli.0}}"></input>
+   </div>
+   <div class="col-md-12">
+       <label class="minap">Nombre Autoriza</label>
+       <input type="text" class="form-control" name="nomAutoriza" id="nomAutoriza" value="{{nomauto.0}}"></input>
+   </div>
+   <div class="col-md-12">
+    <label class="minap">Nombre Revisa</label>
+    <input type="text" class="form-control" name="nomRevisa" id="nomRevisa" value="{{nomrevi.0}}"></input>
+</div>
+   <div class="col-12">
+          <button type="submit" class="btn btn-outline-light">Actualizar</button>
+    </div>
+</form>
+{% endblock %}

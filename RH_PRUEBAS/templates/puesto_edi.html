@@ -1,0 +1,169 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="row g-3"  action="/puesto_fedita/{{dat.0}}" method="post">
+   <h3>
+      <b class="mintit">Editar Puesto: </b> 
+  </h3>
+   <div class="col-md-6">
+      <label for="codPuesto" class="minap">Código de Puesto</label>
+      <input type="text" class="form-control" name="codPuesto" id="codPuesto" value="{{dat.1}}"></input>
+   </div>
+
+   <div class="col-md-6">
+       <label for="idArea" class="minap">Área de adscripción</label>
+       <select name="idArea" id="idArea" class = "form-select" >
+           <option selected="true" value="{{Area.0}}" >{{Area.1}}</option>
+            {%
+               for i in catArea
+            %}
+               <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+       </select>
+   </div>
+   <div class="col-md-12">
+      <label for="nomPuesto" class="minap">Nombre del Puesto</label>
+      <input type="text" class="form-control" name="nomPuesto" id="nomPuesto" value="{{dat.3}}"></input>
+   </div>
+   <div class="col-md-12">
+      <label for="puestoJefeSup" class="minap">Puesto del Jefe Superior</label>
+      <input type="text" class="form-control" name="puestoJefeSup" id="puestoJefeSup" value="{{dat.4}}" ></input>
+   </div>
+   <div class="col-md-8">
+      <label for="jornada" class="minap">Jornada</label>
+      <input type="text" class="form-control" name="jornada" id="jornada" value="{{dat.5}}" ></input>
+   </div>
+   <div class="col-md-4">
+      <label for="remunMensual" class="minap">Remuneración Mensual</label>
+      <input type="text" class="form-control" name="remunMensual" id="remunMensual" value="{{dat.6}}" ></input>
+   </div>
+   <div class="col-md-12">
+      <label for="prestaciones" class="minap">Prestaciones</label>
+      <input type="text" class="form-control" name="prestaciones" id="prestaciones" value="{{dat.7}}" ></input>
+   </div>
+   <div class="col-md-12">
+      <label for="descripcionGeneral" class="minap">Descripción General</label>
+      <input type="text" class="form-control" name="descripcionGeneral" id="descripcionGeneral" value="{{dat.8}}" ></input>
+   </div>
+   <div class="col-md-12">
+       <label for="funciones" class="minap">Funciones</label>
+       <input type="text" class="form-control" name="funciones" id="funciones" value="{{dat.9}}" ></input>
+   </div>
+   <div class="col-md-4">
+       <label for="edad" class="minap">Edad</label>
+       <input type="text" class="form-control" name="edad" id="edad" value="{{dat.10}}" ></input>
+   </div>
+   <div class="col-md-4">
+        <label for="sexo" class="minap">Sexo</label>
+        <select name="sexo" id="sexo" class = "form-select">
+        <option selected="true" value="{{dat.11}}" >{{dat.11}}</option>
+            <option value="Hombre">Hombre</option>
+            <option value="Mujer">Mujer</option>
+            <option value ="Indistinto">Indistinto</option>
+       </select>
+   </div>
+   <div class="col-md-4">
+        <label for="idEstadoCivil" class="minap">Estado Civil</label>
+        <select name="idEstadoCivil" id="idEstadoCivil" class = "form-select">
+           <option selected="true" value="{{EdoCivil.0}}" >{{EdoCivil.1}}</option>
+            {%
+               for i in catEdoCivil
+            %}
+               <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+       </select>
+
+   </div>
+   <div class="col-md-4">
+        <label for="idEscolaridad" class="minap">Escolaridad</label>
+        <select name="idEscolaridad" id="idEscolaridad" class = "form-select">
+        <option selected="true" value="{{Escolaridad.0}}" >{{Escolaridad.1}}</option>
+            {%
+               for i in catEscolaridad
+            %}
+               <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+       </select>
+   </div>
+   <div class="col-md-4">
+        <label for="idGradoAvance" class="minap">Grado Avance</label>
+        <select name="idGradoAvance" id="idGradoAvance" class = "form-select">
+        <option selected="true" value="{{GradoAvance.0}}" >{{GradoAvance.1}}</option>
+           {%
+               for i in catGradoAvance
+            %}
+               <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+       </select>
+   </div>
+   <div class="col-md-4">
+        <label for="idCarrera" class="minap">Carrera</label>
+        <select name="idCarrera" id="idCarrera" class = "form-select">
+        <option selected="true" value="{{Carrera.0}}" >{{Carrera.1}}</option>
+            {%
+               for i in catCarrera
+            %}
+               <option value="{{i.0}}">{{i.1}}</option>
+            {% endfor %}
+       </select>
+   </div>
+   <div class="col-md-12">
+       <label for="experiencia" class="minap">Experiencia</label>
+       <input type="text" class="form-control" name="experiencia" id="experiencia" value="{{dat.16}}" ></input>
+   </div>
+   <div class="col-md-12">
+       <label for="conocimientos" class="minap">Conocimientos</label>
+       <input type="text" class="form-control" name="conocimientos" id="conocimientos" value="{{dat.17}}" ></input>
+
+    </div>
+    <div class="col-md-12">
+        <label for="manejoEquipo" class="minap">ManejoEquipo</label>
+        <input type="text" class="form-control" name="manejoEquipo" id="manejoEquipo" value="{{dat.18}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="reqFisicos" class="minap">Requisitos Físicos</label>
+        <input type="text" class="form-control" name="reqFisicos" id="reqFisicos" value="{{dat.19}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="reqPsicologicos" class="minap">Requisitos Psicológicos</label>
+        <input type="text" class="form-control" name="reqPsicologicos" id="reqPsicologicos" value="{{dat.20}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="responsabilidades" class="minap">Responsabilidades</label>
+        <input type="text" class="form-control" name="responsabilidades" id="responsabilidades" value="{{dat.21}}" ></input>
+    </div>
+    <div class="col-md-12">
+        <label for="condicionesTrabajo" class="minap">Condiciones de Trabajo</label>
+        <input type="text" class="form-control" name="condicionesTrabajo" id="condicionesTrabajo" value="{{dat.22}}" ></input>
+    </div>
+    </div>
+    <div class="col-12">
+        <span class="minap">Seleccione nuevamente idiomas y habilidades requeridas para el perfil de puesto</span>
+    </div>
+    <div class="col-6">
+        <span class="minap">Idiomas:</span>
+   {% for idio in catIdioma  %}
+    <div class="form-check">
+         <input class="form-check-input" type="checkbox" value="" name = "i{{idio.0}}" id="i{{idio.0}}">
+      <label class="minap" for="i{{idio.0}}">
+          {{idio.1}}
+      </label>
+   </div>
+   {% endfor %}
+
+  </div>
+   <div class="col-6">
+       <span class="minap">Habilidades:</span>
+   {% for hab in catHabilidad %}
+      <div class="form-check">
+      <input class="form-check-input" type="checkbox"  name ="h{{hab.0}}"  id="h{{hab.0}}">
+      <label class="minap" for="h{{hab.0}}">
+          {{hab.1}}
+      </label>
+   </div>
+   {% endfor %}
+  </div>
+   <div class="col-12">
+      <button type="submit" class="btn btn-outline-light">Actualizar</button>
+    </div>
+</form>
+{% endblock %}

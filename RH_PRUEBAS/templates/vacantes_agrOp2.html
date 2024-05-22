@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form class="row g-3"  action="/vacantes_fagrega2" method="post">
+   <h3>
+      <b class="mintit"> Agregar Vacante </b>
+   </h3>
+   <div class="col-md-12">
+      <label for="nomPuesto" class="minap">Nombre del Puesto</label>
+      <input type="text" class="form-control" name="nomPuesto" id="nomPuesto" ></input>
+   </div>
+   <br>
+   <div class="col-md-6">
+      <label for="fuenteCandidato" class="minap">Fuente de Candidato</label>
+      <input type="text" class="form-control" name="fuenteCandidato" id="fuenteCandidato" ></input>
+   </div>
+   <div class="col-md-6">
+      <label for="inicioFechaPublic" class="minap">Fecha de Publicación</label>
+      <input type="text" class="form-control" name="inicioFechaPublic" id="inicioFechaPublic" ></input>
+
+   </div>
+   <div class="col-md-12">
+      <label for="finFechaPublic" class="minap">Fecha de Expiración</label>
+      <input type="text" class="form-control" name="finFechaPublic" id="finFechaPublic"></input>
+   </div>
+   <div class="col-md-8">
+      <label for="Publicada" class="minap">Publicada</label>
+      <input type="text" class="form-control" name="publicada" id="publicada" ></input>
+   </div>
+   <div class="col-md-4">
+      <label for="observaciones" class="minap">Observaciónes</label>
+      <input type="text" class="form-control" name="observaciones" id="observaciones" ></input>
+   </div>
+   <div class="col-md-12">
+      <label for="candidactoSelecc" class="minap">Seleccion de Candidato</label>
+      <input type="text" class="form-control" name="candidactoSelecc" id="candidactoSelecc" ></input>
+   </div>
+   <div class="col-md-12">
+      <label for="fechaContratacion" class="minap">Fecha de Contratación</label>
+      <input type="text" class="form-control" name="fechaContratacion" id="fechaContratacion" ></input>
+   </div>
+   <div class="col-md-6">
+       <label for="idRequisicion" class="minap">Id Requisición</label>
+       <input type="text" class="form-control" name="idRequisicion" id="idRequisicion" ></input>
+   </div>
+   <div class="col-md-6">
+       <label for="idpuesto" class="minap">Id Puesto</label>
+       <input type="text" class="form-control" name="idpuesto" id="idpuesto"></input>
+   </div>
+
+   <div class="col-12">
+          <button type="submit" class="btn btn-outline-light">Agregar</button>
+
+    </div>
+</form>
+{% endblock %}

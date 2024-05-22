@@ -1,0 +1,181 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form class="row g-3"  action="/candidatos_fedita2/{{idC.0}}" method="post">
+        <h3>
+            <b class="mintit">Candidatos </b> 
+        </h3>
+   
+   <div class="col-md-12">
+    <label for="idCandidato" class="minap">Id candidato</label>
+    <input type="text" class="form-control" name="idCandidato" id="idCandidato" value="{{idC.0}}"></input>
+ </div>
+ <br>
+ <div class="col-md-6">
+    <label for="idVacante" class="minap">Id Vacante</label>
+    <input type="text" class="form-control" name="idVacante" id="idVacante" value="{{idV.0}}"></input>
+ </div>
+ <div class="col-md-6">
+    <label for="idRequisicion" class="minap">Id Requisicion</label>
+    <input type="text" class="form-control" name="idRequisicion" id="idRequisicion" value="{{idR.0}}"></input>
+
+ </div>
+ <div class="col-md-12">
+    <label for="idPuesto" class="minap">Puesto del Jefe Superior</label>
+    <input type="text" class="form-control" name="idPuesto" id="idPuesto" value="{{Pjf.0}}"></input>
+ </div>
+ <div class="col-md-8">
+    <label for="CURP" class="minap">CURP</label>
+    <input type="text" class="form-control" name="CURP" id="CURP" value="{{curp.0}}"></input>
+ </div>
+ <div class="col-md-4">
+    <label for="RFC" class="minap">RFC</label>
+    <input type="text" class="form-control" name="RFC" id="RFC" value="{{rfc.0}}"></input>
+ </div>
+ <div class="col-md-12">
+    <label for="nombre" class="minap">Nombre</label>
+    <input type="text" class="form-control" name="nombre" id="nombre" value="{{nom.0}}"></input>
+ </div>
+ <div class="col-md-12">
+    <label for="domCalle" class="minap">Calle</label>
+    <input type="text" class="form-control" name="domCalle" id="domCalle" value="{{calle.0}}"></input>
+ </div>
+ <div class="col-md-12">
+     <label for="domNumExtInt" class="minap">Numero Exterior Interior</label>
+     <input type="text" class="form-control" name="domNumExtInt" id="domNumExtInt" value="{{numEI.0}}"></input>
+ </div>
+ <div class="col-md-4">
+     <label for="domColonia" class="minap">Domicilio o Colonia</label>
+     <input type="text" class="form-control" name="domColonia" id="domColonia" value="{{domC.0}}"></input>
+ </div>
+ <div class="col-md-4">
+     <label for="tel1" class="minap">Telefono1</label>
+     <input type="text" class="form-control" name="tel1" id="tel1" value="{{tel.0}}"></input>
+ </div>
+ <div class="col-md-4">
+     <label for="tel2" class="minap">Telefono2</label>
+     <input type="text" class="form-control" name="tel2" id="tel2" value="{{tel2.0}}"></input>
+
+ </div>
+ <div class="col-md-4">
+     <label for="correoE" class="minap">Correo Electrónico</label>
+     <input type="text" class="form-control" name="correoE" id="correoE" value="{{correoE.0}}"></input>
+ </div>
+ <div class="col-md-4">
+     <label for="edad" class="minap">Edad</label>
+      <input type="text" class="form-control" name="edad" id="edad" value="{{edad.0}}"></input>
+     </select>
+ </div>
+ <div class="col-md-4">
+     <label for="sexo" class="minap">Sexo</label>
+      <input type="text" class="form-control" name="sexo" id="sexo" value="{{sexo.0}}"></input>
+ </div>
+ <div class="col-md-12">
+     <label for="idEstadoCivil" class="minap">Estado Civil</label>
+     <input type="text" class="form-control" name="idEstadoCivil" id="idEstadoCivil" value="{{Ecivil.0}}"></input>
+ </div>
+ <div class="col-md-12">
+    <label for="idEstadoCivil" class="minap">Escolaridad</label>
+    <input type="text" class="form-control" name="esco" id="esco" value="{{ides.0}}"></input>
+</div>
+ <div class="col-md-12">
+     <label for="idGradoAvance" class="minap">Grado Avance</label>
+     <input type="text" class="form-control" name="idGradoAvance" id="idGradoAvance" value="{{GAva.0}}"></input>
+     <input type="text" class="form-control" name="idGradoAvance" id="idGradoAvance" value="{{GAva.0}}" readonly="readonly"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="idCarrera" class="minap">Carrera</label>
+      <input type="text" class="form-control" name="idCarrera" id="idCarrera" value="{{carrera.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="entrevSelecReq" class="minap">Entrevista Selececion Requerida</label>
+      <input type="text" class="form-control" name="entrevSelecReq" id="entrevSelecReq" value="{{esr.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="entrevSelecPresen" class="minap">Entrevista Seleccion Presente</label>
+      <input type="text" class="form-control" name="entrevSelecPresen" id="entrevSelecPresen" value="{{esP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="entrevSelecResult" class="minap">Entrevista Seleccion Resultado</label>
+      <input type="text" class="form-control" name="entrevSelecResult" id="entrevSelecResult" value="{{esR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalMedicaReq" class="minap">Evaluacion Medica Requerida</label>
+      <input type="text" class="form-control" name="evalMedicaReq" id="evalMedicaReq" value="{{emR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalMedicaPresen" class="minap">Evaluacion Medica Presente</label>
+      <input type="text" class="form-control" name="evalMedicaPresen" id="evalMedicaPresen" value="{{emP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalMedicaResult" class="minap">Evaluacion Medica Resultado</label>
+      <input type="text" class="form-control" name="evalMedicaResult" id="evalMedicaResult" value="{{emr.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalPsicolgReq" class="minap">Evaluacion Psicologico Requerida</label>
+      <input type="text" class="form-control" name="evalPsicolgReq" id="evalPsicolgReq" value="{{epR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label class="minap">Evaluacion Psicolg Presente</label>
+      <input type="text" class="form-control" name="evalPsicolgPresen" id="evalPsicolgPresen" value="{{epP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label  class="minap">Evaluacion Psicolg Resultado</label>
+      <input type="text" class="form-control" name="evalPsicolgResult" id="evalPsicolgResult" value="{{epr.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalPsicometReq" class="minap">Evaluacion Psicomet Requerida</label>
+      <input type="text" class="form-control" name="evalPsicometReq" id="evalPsicometReq" value="{{epR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalPsicometPresen" class="minap">Evaluacion Psicomet Presente</label>
+      <input type="text" class="form-control" name="evalPsicometPresen" id="evalPsicometPresen" value="{{epP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalPsicometResult" class="minap">Evaluacion Psicomet Resultado</label>
+      <input type="text" class="form-control" name="evalPsicometResult" id="evalPsicometResult" value="{{epr.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalTecnicaReq" class="minap">Evaluacion Tecnica Requerida</label>
+      <input type="text" class="form-control" name="evalTecnicaReq" id="evalTecnicaReq" value="{{etR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalTecnicaPresen" class="minap">Evaluacion Tecnica Presente</label>
+      <input type="text" class="form-control" name="evalTecnicaPresen" id="evalTecnicaPresen" value="{{etP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalTecnicaResult" class="minap">Evaluacion Tecnica Resultado</label>
+      <input type="text" class="form-control" name="evalTecnicaResult" id="evalTecnicaResult" value="{{etr.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalConocReq" class="minap">Evaluacion Conocimientos Requerida</label>
+      <input type="text" class="form-control" name="evalConocReq" id="evalConocReq" value="{{ecR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalConocPresen" class="minap">Evaluacion Conocimientos Presente</label>
+      <input type="text" class="form-control" name="evalConocPresen" id="evalConocPresen" value="{{ecP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalConocResult" class="minap">Evaluacion Conocimientos Resultado</label>
+      <input type="text" class="form-control" name="evalConocResult" id="evalConocResult" value="{{ecr.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label class="minap">Evaluacion Final Requerida</label>
+      <input type="text" class="form-control" name="entrevFinalReq" id="entrevFinalReq" value="{{efR.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label for="evalFinalPresen" class="minap">Evaluacion Final Presente</label>
+      <input type="text" class="form-control" name="entrevFinalPresen" id="entrevFinalPresen" value="{{efP.0}}"></input>
+  </div>
+  <div class="col-md-12">
+      <label  class="minap">Evaluacion Final Resultado</label>
+      <input type="text" class="form-control" name="entrevFinalResul" id="entrevFinalResul" value="{{efr.0}}"></input>
+  </div>
+
+
+  </div>
+   <div class="col-12">
+          <button type="submit" class="btn btn-outline-light">Actualizar</button>
+    </div>
+</form>
+{% endblock %}

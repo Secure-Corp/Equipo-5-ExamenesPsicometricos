@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="tablass">
+    <table class="bordercolor">
+    <tbody>
+    <tr>
+    <td class="minap" valign="top">
+      <div class="mintit">
+         <h3 class="center">VACANTES REGISTRADOS</h3>
+      </div>
+    <table class="table table-dark table-hover" class="bordercolor">
+    <thead>
+      <tr>
+        <td>Vacante</td>
+        <td></td>
+        <td></td>
+        <td> <rigth><h2><a href="/vacante_agrega2" class="btn btn-dark btn-sm">Agregar Vacantes</a></h2></rigth>  </td>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in vac %}
+        <tr>
+        <td width="60%">
+           {{i.1}}
+        </td>
+
+        <td width="6%" class="center">
+        <a href="/vacantes_fdetalle/{{i.0}}" class="btn btn-outline-info btn-sm ">Detalle</a>
+        </td>
+        <td width="6%" class="center">
+        <a href="/vacantes_fedita/{{i.0}}" class="btn btn-outline-info btn-sm ">Editar</a>
+        </td>
+        <td width="6%" class="center">
+        <a href="/vacantes_borrar/{{i.0}}" class="btn btn-outline-primary btn-sm">Borrar</a>
+        </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+   </div>
+
+<form class="row g-3"  action="/vacantes_fdetalle/" method="GET">
+   <h3>
+      <b class="mintit"> Detalle: </b>
+  </h3>
+   <div class="col-md-6">
+      <label for="fuenteCandidato" class="minap">Fuente de Candidato</label>
+      <input type="text" class="form-control" name="fuenteCandidato" id="fuenteCandidato" value="{{FuenteC.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-6">
+      <label for="inicioFechaPublic" class="minap">Fecha de Publicación</label>
+      <input type="text" class="form-control" name="inicioFechaPublic" id="inicioFechaPublic" value="{{FechaP.0}}" readonly="readonly"></input>
+
+   </div>
+   <div class="col-md-12">
+      <label for="finFechaPublic" class="minap">Fecha de Expiración</label>
+      <input type="text" class="form-control" name="finFechaPublic" id="finFechaPublic" value="{{FechaE.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-8">
+      <label for="Publicada" class="minap">Publicada</label>
+      <input type="text" class="form-control" name="Publicada" id="Publicada" value="{{Pub.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-4">
+      <label for="observaciones"class="minap">Observaciónes</label>
+      <input type="text" class="form-control" name="observaciones" id="observaciones" value="{{Obs.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-12">
+      <label for="candidactoSelecc" class="minap">Seleccion de Candidacto</label>
+      <input type="text" class="form-control" name="candidactoSelecc" id="candidactoSelecc" value="{{SeleC.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-12">
+      <label for="fechaContratacion" class="minap">Fecha de Contratación</label>
+      <input type="text" class="form-control" name="fechaContratacion" id="fechaContratacion" value="{{FechaC.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-12">
+       <label for="idr4v  " class="minap">Id Requisición</label>
+       <input type="text" class="form-control" name="idRequisicion" id="idRequisicion" value="{{idRe.0}}" readonly="readonly"></input>
+   </div>
+   <div class="col-md-12">
+      <label for="idr4v  " class="minap">Id Puesto</label>
+      <input type="text" class="form-control" name="idPuesto" id="idPuesto" value="{{idPu.0}}" readonly="readonly"></input>
+  </div>
+</form>
+
+
+{% endblock %}

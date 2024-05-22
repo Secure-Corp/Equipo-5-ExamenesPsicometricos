@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+{% block content %}
+<form class="row g-3"  action="/requisicion_fagrega2" method="post">
+   <h3>
+      <b class="mintit">Agregar Requisicion </b>
+   </h3>
+   <div class="col-md-12">
+      <label class="minap">Folio</label>
+      <input type="text" class="form-control" name="folio" id="folio"  ></input>
+   </div>
+   <br>
+   <div class="col-md-12">
+      <label class="minap">Fecha de Elaboracion</label>
+      <input type="text" class="form-control" name="fechaElab" id="fechaElab" ></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Fecha Reclutamiento</label>
+      <input type="text" class="form-control" name="fechaRecluta" id="fechaRecluta"></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Inicio Vacante</label>
+      <input type="text" class="form-control" name="fechaInicVac" id="fechaInicVac" ></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Motivo</label>
+      <input type="text" class="form-control" name="motivoRequisicion" id="motivoRequisicion" ></input>
+   </div>
+      <div class="col-md-12">
+      <label class="minap">Motivo Especifique</label>
+      <input type="text" class="form-control" name="motivoEspesifique" id="motivoEspesifique" ></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Tipo</label>
+      <input type="text" class="form-control" name="tipoVacante" id="tipoVacante" ></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Nombre Solicita</label>
+      <input type="text" class="form-control" name="nomSolicita" id="nomSolicita" ></input>
+   </div>
+   <div class="col-md-12">
+       <label class="minap">Nombre Autoriza</label>
+       <input type="text" class="form-control" name="nomAutoriza" id="nomAutoriza" ></input>
+   </div>
+   <div class="col-md-12">
+      <label class="minap">Nombre Revisa</label>
+      <input type="text" class="form-control" name="nomRevisa" id="nomRevisa" ></input>
+   </div>
+   <div class="col-12">
+          <button type="submit" class="btn btn-outline-light">Agregar</button>
+    </div>
+</form>
+{% endblock %}
